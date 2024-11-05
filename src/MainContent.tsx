@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
     AppBar,
     Box,
@@ -41,7 +41,6 @@ const drawerWidth: number = 280;
 
 interface Props {
     window?: () => Window;
-    children: React.ReactNode;
 }
 
 const StyledDrawer = styled.div`
@@ -55,6 +54,15 @@ const StyledDrawer = styled.div`
     overflow-y: auto;
     &::-webkit-scrollbar {
         display: none;
+    }
+`;
+
+const FooterElement = styled.div`
+    padding: 10px;
+    cursor: pointer;
+    color: #9f9d9db8;
+    &:hover {
+        background-color: #e8e8e8c8;
     }
 `;
 
@@ -349,10 +357,36 @@ export default function MainContent(props: Props) {
             >
                 <Toolbar />
                 <div style={{ backgroundColor: "#f8f9fd" }}>
-                    {props.children}
+                    <Outlet />
+                    <div
+                        style={{
+                            width: "100%",
+                            position: "relative",
+                            bottom: 0,
+                        }}
+                    >
+                        <Stack
+                            direction="row"
+                            spacing={2}
+                            sx={{
+                                justifyContent: "space-between",
+                                marginTop: "40px",
+                                maxWidth: "100%",
+                                mt: "auto",
+                                display: { sm: "none", md: "flex" },
+                            }}
+                        >
+                            <Stack direction="row" spacing={1}>
+                                <FooterElement>Support</FooterElement>
+                                <FooterElement>Help Center</FooterElement>
+                                <FooterElement>Privacy</FooterElement>
+                                <FooterElement>Terms of service</FooterElement>
+                            </Stack>
+                            <FooterElement>@2024 - Mira</FooterElement>
+                        </Stack>
+                    </div>
                 </div>
             </Box>
-            <Outlet />
         </Box>
     );
 }

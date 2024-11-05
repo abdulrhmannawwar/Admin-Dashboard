@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Box, Button, Divider, Stack } from "@mui/material";
 import styled from "styled-components";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
-import Footer from "../../../components/Footer";
 
 const Anchor = styled.a`
     text-decoration: none;
@@ -156,7 +155,6 @@ const Pricing: React.FC = () => {
                     </Card>
                 </Stack>
             </Box>
-            <Footer />
         </>
     );
 };

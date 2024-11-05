@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Box, Divider, Stack, Button } from "@mui/material";
 import styled from "styled-components";
-import Footer from "../../components/Footer";
 import AddIcon from "@mui/icons-material/Add";
 import EnhancedTable from "./Table";
 
@@ -56,7 +55,6 @@ const Orders: React.FC = () => {
                     <EnhancedTable />
                 </div>
             </Box>
-            <Footer />
         </>
     );
 };

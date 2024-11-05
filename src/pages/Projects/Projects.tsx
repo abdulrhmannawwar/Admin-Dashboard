@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Box, Divider, Stack } from "@mui/material";
 import styled from "styled-components";
-import Footer from "../../components/Footer";
 import ImgMediaCard from "./Card";
 import laptop1 from "../../assets/laptop.jpg";
 import laptop2 from "../../assets/laptop2.jpg";
@@ -99,7 +98,6 @@ const Projects: React.FC = () => {
                     </Stack>
                 </Box>
             </Box>
-            <Footer />
         </>
     );
 };

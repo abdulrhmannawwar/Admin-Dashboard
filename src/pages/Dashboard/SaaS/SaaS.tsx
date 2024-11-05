@@ -7,7 +7,6 @@ import Map from "./Map";
 import Barchart from "./Barchart";
 import PieChart from "./PieChart";
 import BasicTable from "./Table";
-import Footer from "../../../components/Footer";
 
 const StyledP = styled.p`
     margin: 2px;
@@ -263,7 +262,6 @@ export default function SaaS() {
                     </div>
                 </Stack>
             </Box>
-            <Footer />
         </>
     );
 }

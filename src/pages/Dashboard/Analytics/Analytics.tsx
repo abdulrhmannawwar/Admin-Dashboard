@@ -8,7 +8,6 @@ import Map from "./Map";
 import PieChart from "./PieChart";
 import LanguageStats from "./Progress";
 import BasicTable from "./Table";
-import Footer from "../../../components/Footer";
 
 const StyledP = styled.p`
     margin: 2px;
@@ -289,7 +288,6 @@ export default function Analytics() {
                     </Box>
                 </Stack>
             </Box>
-            <Footer />
         </>
     );
 }

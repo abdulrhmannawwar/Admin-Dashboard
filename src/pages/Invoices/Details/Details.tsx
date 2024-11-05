@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Box, Divider, Stack, Button } from "@mui/material";
 import styled from "styled-components";
-import Footer from "../../../components/Footer";
 
 const Anchor = styled.a`
     text-decoration: none;
@@ -242,7 +241,6 @@ const Details: React.FC = () => {
                     </div>
                 </Box>
             </Box>
-            <Footer />
         </>
     );
 };

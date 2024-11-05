@@ -3,7 +3,6 @@ import { Avatar, Box, Button, Divider, Stack } from "@mui/material";
 import styled from "styled-components";
 import TextField from "@mui/material/TextField";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import Footer from "../../../components/Footer";
 
 const Anchor = styled.a`
     text-decoration: none;
@@ -196,7 +195,6 @@ const Settings: React.FC = () => {
                     </Button>
                 </Stack>
             </Box>
-            <Footer />
         </>
     );
 };

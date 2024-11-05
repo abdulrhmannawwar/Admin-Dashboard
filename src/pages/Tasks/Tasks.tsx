@@ -3,10 +3,8 @@ import { Box, Divider, Stack, Avatar, Button } from "@mui/material";
 import styled from "styled-components";
 import person1 from "../../assets/person1.jpg";
 import person2 from "../../assets/person2.jpg";
-import person3 from "../../assets/person3.jpg";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import AddIcon from "@mui/icons-material/Add";
-import Footer from "../../components/Footer";
 const Anchor = styled.a`
     text-decoration: none;
     color: #4782d2;

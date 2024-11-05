@@ -3,7 +3,6 @@ import { Box, Divider, Stack, Avatar, Button } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import styled from "styled-components";
 import SendIcon from "@mui/icons-material/Send";
-import Footer from "../../../components/Footer";
 import person1 from "../../../assets/person1.jpg";
 import person2 from "../../../assets/person2.jpg";
 import person3 from "../../../assets/person3.jpg";
@@ -302,7 +301,6 @@ const Chat: React.FC = () => {
                     </Box>
                 </Stack>
             </Box>
-            <Footer />
         </>
     );
 };

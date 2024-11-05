@@ -11,7 +11,6 @@ import Chart from "./chart";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import BasicTable from "./Table";
-import Footer from "../../../components/Footer";
 import person1 from "../../../assets/person1.jpg";
 
 const Anchor = styled.a`
@@ -325,7 +324,6 @@ const Profile: React.FC = () => {
                     </Stack>
                 </Stack>
             </Box>
-            <Footer />
         </>
     );
 };

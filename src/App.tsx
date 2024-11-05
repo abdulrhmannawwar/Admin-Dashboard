@@ -1,6 +1,11 @@
 import "./index.css";
 import MainContent from "./MainContent";
-import { Routes, Route, Navigate } from "react-router-dom";
+import {
+    Routes,
+    Route,
+    BrowserRouter as Router,
+    Navigate,
+} from "react-router-dom";
 import Default from "./pages/Dashboard/Default/Default";
 import Analytics from "./pages/Dashboard/Analytics/Analytics";
 import SaaS from "./pages/Dashboard/SaaS/SaaS";
@@ -24,154 +29,52 @@ import ResetPassword from "./pages/Auth/ResetPassword/ResetPassword";
 import ResetPasswordCover from "./pages/Auth/ResetPasswordCover/ResetPasswordCover";
 import Page404 from "./pages/Auth/Page404/Page404";
 import Page500 from "./pages/Auth/Page500/Page500";
+
 function App() {
     return (
         <div className="App">
-            <Routes>
-                <Route
-                    path="/"
-                    element={<Navigate to="/Dashboard/Default" />}
-                />
-                <Route path="/Dashboard">
+            <Router>
+                <Routes>
+                    <Route path="/" element={<MainContent />}>
+                        <Route
+                            index
+                            element={<Navigate to="/Dashboard/Default" />}
+                        />
+                        <Route path="Dashboard/Default" element={<Default />} />
+                        <Route
+                            path="Dashboard/Analytics"
+                            element={<Analytics />}
+                        />
+                        <Route path="Dashboard/SaaS" element={<SaaS />} />
+                        <Route path="Pages/Profile" element={<Profile />} />
+                        <Route path="Pages/Settings" element={<Settings />} />
+                        <Route path="Pages/Pricing" element={<Pricing />} />
+                        <Route path="Pages/Chat" element={<Chat />} />
+                        <Route
+                            path="Pages/Blank Page"
+                            element={<BlankPage />}
+                        />
+                        <Route path="/Projects" element={<Projects />} />
+                        <Route path="/Orders" element={<Orders />} />
+                        <Route path="/Products" element={<Products />} />
+                        <Route path="/Invoices/List" element={<List />} />
+                        <Route path="/Invoices/Details" element={<Details />} />
+                        <Route path="/Tasks" element={<Tasks />} />`
+                        <Route path="/Calendar" element={<Calendar />} />
+                    </Route>
+                    <Route path="/Auth/Sign In" element={<SignIn />} />
+                    <Route path="/Auth/Sign In Cover" element={<SignInCover />} />
+                    <Route path="/Auth/Sign Up" element={<SignUp />} />
+                    <Route path="/Auth/Sign Up Cover" element={<SignUpCover />} />
+                    <Route path="/Auth/Reset Password" element={<ResetPassword />} />
                     <Route
-                        path="Default"
-                        element={
-                            <MainContent>
-                                <Default />
-                            </MainContent>
-                        }
-                    />
-                    <Route
-                        path="Analytics"
-                        element={
-                            <MainContent>
-                                <Analytics />
-                            </MainContent>
-                        }
-                    />
-                    <Route
-                        path="SaaS"
-                        element={
-                            <MainContent>
-                                <SaaS />
-                            </MainContent>
-                        }
-                    />
-                </Route>
-                <Route path="/Pages">
-                    <Route
-                        path="Profile"
-                        element={
-                            <MainContent>
-                                <Profile />
-                            </MainContent>
-                        }
-                    />
-                    <Route
-                        path="Settings"
-                        element={
-                            <MainContent>
-                                <Settings />
-                            </MainContent>
-                        }
-                    />
-                    <Route
-                        path="Pricing"
-                        element={
-                            <MainContent>
-                                <Pricing />
-                            </MainContent>
-                        }
-                    />
-                    <Route
-                        path="Chat"
-                        element={
-                            <MainContent>
-                                <Chat />
-                            </MainContent>
-                        }
-                    />
-                    <Route
-                        path="Blank Page"
-                        element={
-                            <MainContent>
-                                <BlankPage />
-                            </MainContent>
-                        }
-                    />
-                </Route>
-                <Route
-                    path="/Projects"
-                    element={
-                        <MainContent>
-                            <Projects />
-                        </MainContent>
-                    }
-                />
-                <Route
-                    path="/Orders"
-                    element={
-                        <MainContent>
-                            <Orders />
-                        </MainContent>
-                    }
-                />
-                <Route
-                    path="/Products"
-                    element={
-                        <MainContent>
-                            <Products />
-                        </MainContent>
-                    }
-                />
-                <Route path="Invoices">
-                    <Route
-                        path="List"
-                        element={
-                            <MainContent>
-                                <List />
-                            </MainContent>
-                        }
-                    />
-                    <Route
-                        path="Details"
-                        element={
-                            <MainContent>
-                                <Details />
-                            </MainContent>
-                        }
-                    />
-                </Route>
-                <Route
-                    path="/Tasks"
-                    element={
-                        <MainContent>
-                            <Tasks />
-                        </MainContent>
-                    }
-                />
-                <Route
-                    path="/Calendar"
-                    element={
-                        <MainContent>
-                            <Calendar />
-                        </MainContent>
-                    }
-                />
-                <Route path="/Auth">
-                    <Route path="Sign In" element={<SignIn />} />
-                    <Route path="Sign In Cover" element={<SignInCover />} />
-                    <Route path="Sign Up" element={<SignUp />} />
-                    <Route path="Sign Up Cover" element={<SignUpCover />} />
-                    <Route path="Reset Password" element={<ResetPassword />} />
-                    <Route
-                        path="Reset Password Cover"
+                        path="/Auth/Reset Password Cover"
                         element={<ResetPasswordCover />}
                     />
-                    <Route path="404 Page" element={<Page404 />} />
-                    <Route path="500 Page" element={<Page500 />} />
-                </Route>
-            </Routes>
+                    <Route path="/Auth/404 Page" element={<Page404 />} />
+                    <Route path="/Auth/500 Page" element={<Page500 />} />
+                </Routes>
+            </Router>
         </div>
     );
 }

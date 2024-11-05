@@ -8,7 +8,6 @@ import RevenueChart from "./LineChart";
 import PieChart from "./PieChart";
 import Barchart from "./Barchart";
 import BasicTable from "./Table";
-import Footer from "../../../components/Footer";
 
 const StyledP = styled.p`
     margin: 2px;
@@ -293,7 +292,6 @@ const Default: React.FC = () => {
                         <BasicTable />
                     </div>
                 </Stack>
-                <Footer />
             </Box>
         </div>
     );
