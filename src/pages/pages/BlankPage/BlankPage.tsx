@@ -25,6 +25,7 @@ const PlankPage: React.FC = () => {
                     width: "75vw",
                     margin: "0 20px",
                     padding: "10px",
+                    minHeight: "82vh",
                 }}
             >
                 <Stack direction="column">

@@ -254,7 +254,11 @@ export default function MainContent(props: Props) {
         window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: "flex" }}>
+        <Box
+            sx={{
+                display: "flex",
+            }}
+        >
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -358,11 +362,12 @@ export default function MainContent(props: Props) {
                 <Toolbar />
                 <div style={{ backgroundColor: "#f8f9fd" }}>
                     <Outlet />
-                    <div
-                        style={{
-                            width: "100%",
-                            position: "relative",
-                            bottom: 0,
+                    <Box
+                        sx={{
+                            backgroundColor: "#f8f9fd",
+                            py: 2,
+                            textAlign: "center",
+                            mt: "auto",
                         }}
                     >
                         <Stack
@@ -370,9 +375,7 @@ export default function MainContent(props: Props) {
                             spacing={2}
                             sx={{
                                 justifyContent: "space-between",
-                                marginTop: "40px",
                                 maxWidth: "100%",
-                                mt: "auto",
                                 display: { sm: "none", md: "flex" },
                             }}
                         >
@@ -384,7 +387,7 @@ export default function MainContent(props: Props) {
                             </Stack>
                             <FooterElement>@2024 - Mira</FooterElement>
                         </Stack>
-                    </div>
+                    </Box>
                 </div>
             </Box>
         </Box>
